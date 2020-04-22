@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+lib_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
+require 'fb/integration'
+
+config_file = File.expand_path(
+  File.join(File.dirname(__FILE__), '..', 'config.rb')
+)
+
+puts '-' * 80
+unless File.exists? config_file
+  puts "Config file #{config_file} not found. Copying sample"
+  system('./bin/generate_config')
+end
+
+load(config_file)
+puts "Repositories found. #{Fb::Integration.repositories.map(&:destination)}"
+puts '-' * 80
+Fb::Integration::CLI.new(ARGV).run
