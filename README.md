@@ -1,38 +1,50 @@
 # Fb::Integration
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fb/integration`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a repo that spin up the form builder platform containers.
 
-TODO: Delete this and the text above, and describe your gem
+## Clone
 
-## Installation
+    $ git clone git@github.com:ministryofjustice/fb-integration.git
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'fb-integration'
-```
-
-And then execute:
+Install dependencies with:
 
     $ bundle
 
-Or install it yourself as:
+## Setup all containers
 
-    $ gem install fb-integration
+    $ ./bin/container --install --all
 
-## Usage
+## Update a specific container
 
-TODO: Write usage instructions here
 
-## Development
+The following command will just rebuild the container:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    $ ./bin/container --submitter
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+The following command will install a copy local submitter and rebuild the container:
 
-## Contributing
+    $ ./bin/container --submitter-local
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fb-integration.
+The following command will install a copy of submitter from github and
+rebuild the container:
+
+    $ ./bin/container --submitter --install
+
+For other options run:
+
+    $ ./bin/container --help
+
+## Configuration file
+
+In order for the repo knows the container name and the github repo, it was
+create with a config file as fundamental. For more details see
+config_file.rb.sample.
+
+## Testing
+
+And then execute:
+
+    $ bundle exec rspec
 
 ## License
 
