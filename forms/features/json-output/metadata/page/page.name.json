@@ -1,0 +1,32 @@
+{
+  "_id": "page.name",
+  "_type": "page.form",
+  "components": [
+    {
+      "$component": true,
+      "$control": true,
+      "$definition": true,
+      "$field": true,
+      "_id": "page.name--text.auto_name__1",
+      "_type": "text",
+      "hint": "Tell us your first name",
+      "label": "First name",
+      "name": "first_name"
+    },
+    {
+      "$component": true,
+      "$control": true,
+      "$definition": true,
+      "$field": true,
+      "_id": "page.name--text.auto_name__2",
+      "_type": "text",
+      "hint": "Tell us your last name",
+      "label": "Last name",
+      "name": "last_name"
+    }
+  ],
+  "heading": "Your name",
+  "hint": "Tell us your first and last name using **Text** components",
+  "sectionHeading": "**Text** components",
+  "url": "name"
+}

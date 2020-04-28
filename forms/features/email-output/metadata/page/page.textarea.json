@@ -1,0 +1,16 @@
+{
+  "_id": "page.textarea",
+  "_type": "page.singlequestion",
+  "components": [
+    {
+      "_id": "page.textarea--textarea.auto_name__3",
+      "_type": "textarea",
+      "hint": "Tell us about your cat",
+      "label": "Your cat",
+      "name": "cat_details"
+    }
+  ],
+  "sectionHeading": "A **Textarea** component",
+  "show": true,
+  "url": "textarea"
+}

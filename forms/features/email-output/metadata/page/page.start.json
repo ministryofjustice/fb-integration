@@ -1,0 +1,22 @@
+{
+  "_id": "page.start",
+  "_type": "page.start",
+  "body": "Your answers will be sent by email to the address you enter in the form",
+  "heading": "About your cat",
+  "lede": "This form asks about your cat in a series of steps, each using a different Form Builder component",
+  "steps": [
+    "page.name",
+    "page.email-contact",
+    "page.email-address",
+    "page.textarea",
+    "page.checkbox",
+    "page.date",
+    "page.number",
+    "page.select",
+    "page.autocomplete",
+    "page.upload",
+    "page.check-answers",
+    "page.confirmation"
+  ],
+  "url": "/"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "page.upload",
+  "_type": "page.singlequestion",
+  "components": [
+    {
+      "_id": "page.upload--upload.auto_name__1",
+      "_type": "upload",
+      "hint": "Send us a picture of your cat",
+      "label": "What does your cat look like?",
+      "name": "cat_picture",
+      "validation": {
+        "maxSize": "5242880",
+        "required": false
+      }
+    }
+  ],
+  "sectionHeading": "An **Upload** component",
+  "url": "upload",
+  "steps": [
+    "page.upload-check"
+  ]
+}

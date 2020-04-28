@@ -1,0 +1,23 @@
+{
+  "_id": "page.email-address",
+  "_type": "page.singlequestion",
+  "components": [
+    {
+      "_id": "page.email-address--email.auto_name__2",
+      "_type": "email",
+      "hint": "Tell us your email address",
+      "label": "Your email address",
+      "name": "email_address",
+      "validation": {
+        "required": true
+      }
+    }
+  ],
+  "sectionHeading": "An **Email** component",
+  "show": {
+    "identifier": "has_email",
+    "operator": "is",
+    "value": "yes"
+  },
+  "url": "email-address"
+}

@@ -9,6 +9,7 @@ GEM
       zeitwerk (~> 2.2)
     concurrent-ruby (1.1.6)
     diff-lcs (1.3)
+    foreman (0.87.1)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     minitest (5.14.0)
@@ -35,6 +36,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  foreman
   rspec
 
 RUBY VERSION

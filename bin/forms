@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+lib_dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
+require 'fb/integration'
+
+require 'optparse'
+OptionParser.new do |option|
+  option.on('--local', 'Copy fb-runner from local machine') do
+    @setup_type = 'local'
+  end
+
+  option.on('--remote', 'Clone fb-runner from Github.') do
+    @setup_type = 'remote'
+  end
+
+  option.on_tail('--help', "You're looking at it.") do
+    print option.help
+    exit
+  end
+end.parse!(ARGV)
+
+setup_type = @setup_type || 'remote'
+repository = Fb::Integration::Repository.new(
+  name: 'fb-runner-node',
+  destination: 'runner'
+)
+#Fb::Integration::SetupRepository.new(
+#  repository: repository
+#).execute(setup_type: setup_type)
+#system("cd .runner && npm install")
+puts '=' * 80
+puts 'Starting foreman'
+system('foreman start')
+puts '=' * 80

@@ -1,0 +1,6 @@
+{
+  "_id": "upload.hint.timing",
+  "_type": "string",
+  "description": "Information about when files will be uploaded",
+  "value": ""
+}

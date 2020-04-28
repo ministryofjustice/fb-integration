@@ -1,0 +1,8 @@
+{
+  "_id": "service",
+  "_isa": "@ministryofjustice/fb-components=>service",
+  "_type": "config.service",
+  "name": "Email Output Acceptance Test Service",
+  "pdfHeading": "Email Output Service PDF Heading",
+  "phase": "none"
+}
